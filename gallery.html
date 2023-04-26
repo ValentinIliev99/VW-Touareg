@@ -18,8 +18,36 @@
         <a href="history.html">История</a>
         <a href="rallydakar.html">Рали Дакар</a>
         <a class="active" href="#gallery">Галерия</a>
-        <a href="#about">За нас</a>
+        <a href="about.html">За нас</a>
     </div>
-    <hr>
+    <div class="media" style="text-align:center;">
+        <button onclick="playPause()">Play/Pause</button> 
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <video id="video1" >
+            <source src="video/vwtouareg.mp4" type="video/mp4">
+            VW Touareg тегли Boeing 747
+        </video>
+    </div>
+    
+    <script> 
+        var myVideo = document.getElementById("video1"); 
+        
+        function playPause() { 
+          if (myVideo.paused) 
+            myVideo.play(); 
+          else 
+            myVideo.pause(); 
+        } 
+        
+        function makeBig() { 
+            myVideo.width = 650; 
+        } 
+        
+        function makeNormal() { 
+            myVideo.width = 320; 
+        } 
+        </script> 
 </body>
 </html>
